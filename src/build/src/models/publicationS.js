@@ -27,4 +27,4 @@ const publicationS = index_js_1.mongoose.Schema({
         type: 'objectId'
     }
 });
-module.exports = index_js_1.mongoose.model('usuario', publicationS);
+module.exports = index_js_1.mongoose.model('publicacion', publicationS);
