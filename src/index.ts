@@ -1,13 +1,14 @@
 const express= require('express')
 const app = express();
 const mongoose = require("mongoose")
-const rutas = require("./routes/user")
-
+const usuarios = require("./routes/user")
+ 
 require('dotenv').config();
 
 app.set('port','8080')
 app.use(express.json())
-app.use('/',rutas)
+
+app.use('/',usuariosC)
 app.listen(app.get('port'), () => {
    console.log("Welcome to my API");
 })

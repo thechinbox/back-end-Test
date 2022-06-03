@@ -4,4 +4,4 @@ const regionSchema = mongooseR.Schema({
         type: 'string'
       }
 });
-module.exports = mongooseR.model('usuarios',userSchema)
+module.exports = mongooseR.model('region',userSchema)
