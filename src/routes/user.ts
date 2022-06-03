@@ -1,5 +1,6 @@
-let express2= require('express')
-const usuariosC = express2.Router();
+import {express} from '../index.js';
+
+const usuariosC = express.Router();
 let userS = require("../models/userS");
 
 //crear usuario

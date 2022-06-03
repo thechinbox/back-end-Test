@@ -1,12 +1,14 @@
 "use strict";
-const express = require('express');
-const app = express();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.express = void 0;
+exports.express = require('express');
+const app = (0, exports.express)();
 const mongoose = require("mongoose");
 const usuarios = require("./routes/user");
 require('dotenv').config();
 app.set('port', '8080');
-app.use(express.json());
-app.use('/', usuariosC);
+app.use(exports.express.json());
+app.use('/', usuarios);
 app.listen(app.get('port'), () => {
     console.log("Welcome to my API");
 });

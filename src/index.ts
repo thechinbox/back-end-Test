@@ -1,4 +1,4 @@
-const express= require('express')
+export const express= require('express')
 const app = express();
 const mongoose = require("mongoose")
 const usuarios = require("./routes/user")
@@ -8,7 +8,7 @@ require('dotenv').config();
 app.set('port','8080')
 app.use(express.json())
 
-app.use('/',usuariosC)
+app.use('/',usuarios)
 app.listen(app.get('port'), () => {
    console.log("Welcome to my API");
 })

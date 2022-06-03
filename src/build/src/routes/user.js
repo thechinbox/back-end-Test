@@ -1,6 +1,7 @@
 "use strict";
-let express2 = require('express');
-const usuariosC = express2.Router();
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_js_1 = require("../index.js");
+const usuariosC = index_js_1.express.Router();
 let userS = require("../models/userS");
 //crear usuario
 usuariosC.post("/signup", (req, res) => {
