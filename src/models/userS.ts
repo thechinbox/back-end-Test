@@ -1,6 +1,6 @@
+import {mongoose} from '../index.js';
 
-let mongooseu = require("mongoose")
-const userSchema = mongooseu.Schema({
+const userSchema = mongoose.Schema({
       nombre: {
         type: 'string'
       },
@@ -20,4 +20,4 @@ const userSchema = mongooseu.Schema({
         type: 'date'
       }
 });
-module.exports = mongooseu.model('usuario',userSchema)
+module.exports = mongoose.model('usuario',userSchema)

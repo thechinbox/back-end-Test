@@ -1,6 +1,7 @@
 "use strict";
-let mongooseu = require("mongoose");
-const userSchema = mongooseu.Schema({
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_js_1 = require("../index.js");
+const userSchema = index_js_1.mongoose.Schema({
     nombre: {
         type: 'string'
     },
@@ -20,4 +21,4 @@ const userSchema = mongooseu.Schema({
         type: 'date'
     }
 });
-module.exports = mongooseu.model('usuario', userSchema);
+module.exports = index_js_1.mongoose.model('usuario', userSchema);

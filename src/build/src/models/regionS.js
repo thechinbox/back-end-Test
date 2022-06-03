@@ -1,8 +1,9 @@
 "use strict";
-let mongooseR = require("mongoose");
-const regionSchema = mongooseR.Schema({
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_js_1 = require("../index.js");
+const regionSchema = index_js_1.mongoose.Schema({
     nombre: {
         type: 'string'
     }
 });
-module.exports = mongooseR.model('region', userSchema);
+module.exports = index_js_1.mongoose.model('region', regionSchema);

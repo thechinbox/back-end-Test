@@ -1,7 +1,8 @@
-let mongooseR = require("mongoose")
-const regionSchema = mongooseR.Schema({
+import {mongoose} from '../index.js';
+
+const regionSchema = mongoose.Schema({
       nombre: {
         type: 'string'
       }
 });
-module.exports = mongooseR.model('region',userSchema)
+module.exports = mongoose.model('region',regionSchema)
