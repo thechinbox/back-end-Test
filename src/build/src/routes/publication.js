@@ -20,12 +20,13 @@ publishC.post("/publish", (req, res) => {
 });
 publishC.get("/getpublicaciones", (req, res) => {
     publicationS
-        .find()
+        .find(req.query)
         .then((data) => {
-        for (let i in data) {
-            console.log(data[i]);
-        }
+        console.log(data);
     })
-        .catch((err) => res.json(err));
+        .catch((err) => {
+        console.log("Error encontrado");
+        res.json(err);
+    });
 });
 module.exports = publishC;

@@ -21,14 +21,15 @@ publishC.post("/publish", (req:any,res:any)=>{
 
 publishC.get("/getpublicaciones", (req:any, res:any) => {
     publicationS
-    .find()
+    .find(req.query)
     .then((data:any) => {
-        for(let i in data){
-            console.log(data[i]);
-            
-        }
+        console.log(data);
     })
-    .catch((err:any) => res.json(err))
+    .catch((err:any) => {
+        console.log("Error encontrado");
+        res.json(err)
+    })
 })
+
 
 module.exports = publishC;
