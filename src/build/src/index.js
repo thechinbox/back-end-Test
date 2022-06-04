@@ -6,11 +6,17 @@ exports.mongoose = require("mongoose");
 const app = (0, exports.express)();
 const usuarios = require("./routes/user");
 const publicaciones = require("./routes/publication");
+const categorias = require("./routes/categorias");
+const unidades = require("./routes/unidades");
+const estadosp = require("./routes/estadosproductos");
 require('dotenv').config();
 app.set('port', '8080');
 app.use(exports.express.json());
 app.use('/', usuarios);
 app.use('/', publicaciones);
+app.use('/', categorias);
+app.use('/', unidades);
+app.use('/', estadosp);
 app.listen(app.get('port'), () => {
     console.log("Welcome to my API");
 });

@@ -22,9 +22,6 @@ const publicationS = index_js_1.mongoose.Schema({
     },
     tipoventa: {
         type: 'objectId'
-    },
-    iddireccion: {
-        type: 'objectId'
     }
 });
-module.exports = index_js_1.mongoose.model('publicacion', publicationS);
+module.exports = index_js_1.mongoose.model('publicaciones', publicationS);

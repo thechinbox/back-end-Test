@@ -21,9 +21,6 @@ const publicationS = mongoose.Schema({
     },
     tipoventa:{
         type: 'objectId'
-    },
-    iddireccion:{
-        type: 'objectId'
     }
 });
-module.exports = mongoose.model('publicacion',publicationS)
+module.exports = mongoose.model('publicaciones',publicationS)
